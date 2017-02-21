@@ -1,25 +1,22 @@
-angular.module('miniRouting', ['ui.router'])
-
-.config(function($stateProvider, $urlRouterProvider){
+angular.module('miniRouting', ['ui.router']).config(function($stateProvider, $urlRouterProvider){
 
   $stateProvider
-
   .state('home', {
-    templateUrl: "/home/homeTmpl.html",
-    controller: "homeCtrl",
-    url: '/'
+    url: '/',
+    templateUrl: 'js/home/homeTmpl.html',
+    controller: 'homeCtrl'
   })
   .state('settings', {
-    templateUrl: "/settings/settingsTmpl.html",
-    controller: "settingsCtrl.js",
-    url: "/settings"
+    url: 'settings',
+    templateUrl: 'js/settings/settingsTmpl.html',
+    controller: 'settingsCtrl.js'
   })
   .state('products', {
-    templateUrl: "/products/productTmpl.html",
-    controller: "productsCtrl.js",
-    url: "/products/:id"
+    url: '/products/:id',
+    templateUrl: 'js/products/productTmpl.html',
+    controller: 'productsCtrl.js'
   });
 
   $urlRouterProvider.otherwise('/');
 
-})
+});
