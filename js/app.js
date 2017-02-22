@@ -7,7 +7,7 @@ angular.module('miniRouting', ['ui.router']).config(function($stateProvider, $ur
     controller: 'homeCtrl'
   })
   .state('settings', {
-    url: 'settings',
+    url: '/settings',
     templateUrl: 'js/settings/settingsTmpl.html',
     controller: 'settingsCtrl'
   })
